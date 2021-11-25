@@ -1,0 +1,14 @@
+* {
+margin: 0;
+padding: 0;
+}
+
+#map {
+    height: 100%;
+    background-color: grey;
+  }
+header {
+  background-color: rgb(145, 170, 216);
+  margin: 30px;
+  text-align: center;
+}
