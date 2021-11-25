@@ -2,6 +2,7 @@ header {
     align-items: right;
 }
 
+<<<<<<< HEAD
 .dropbtn {
     background-color: #04AA6D;
     color: white;
@@ -38,3 +39,14 @@ header {
   .dropdown:hover .dropdown-content {display: block;}
   
   .dropdown:hover .dropbtn {background-color: #000;}
+=======
+#map {
+    height: 100%;
+    background-color: grey;
+  }
+header {
+  background-color: rgb(145, 170, 216);
+  margin: 30px;
+  text-align: center;
+}
+>>>>>>> 28a3fd942b648c001c868921e56f44c9fe6967a8
