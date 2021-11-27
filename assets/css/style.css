@@ -8,7 +8,9 @@ padding: 0;
     background-color: grey;
   }
 header {
-  background-color: rgb(145, 170, 216);
+  background-color: rgb(175, 204, 223);
   margin: 30px;
   text-align: center;
+  border-bottom: rgb(13, 26, 54) ;
 }
+
