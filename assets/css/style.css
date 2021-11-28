@@ -81,7 +81,7 @@ header {
      border-radius: 4px;
     }
 #map:hover {
-    filter: blur(2px);
+    border: solid rgb(218, 226, 235);
 }
     
 html,body {
