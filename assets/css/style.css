@@ -1,26 +1,24 @@
 * {
-    margin: 0;
-    padding: 0;
+    margin: 10px;
+    padding: 5px;
     }
-    
-#map {
-        height: 100%;
-        background-color: grey;
-    }
-
+body {
+    background-color: rgb(147, 206, 240);
+}
 h1, h2, h3 {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 header {
-        background-color: rgb(145, 170, 216);
+        background-color: rgb(240, 242, 247);
         margin: 30px;
         text-align: center;
-    }
-    .card-body {
-        min-height: 100px;
-    }
-    .answer-box {
+        border-radius: 8px;
+}
+.card-body {
+    min-height: 100px;
+}
+.answer-box {
         border-radius: 5px;
         border-width: 1px;
         box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
@@ -29,31 +27,106 @@ header {
         margin: 0 auto;
         max-width: 900px;
         padding: 30px 40px;
-        
     }
-    .wrapper {
-            margin: auto;
-            padding-top: px;
-            padding-left: 20px;
-            padding-right: 20px;
-            justify-content: center;
-        }
-        #answer {
-            -webkit-appearance: none;
-            -moz-appearance: none;
-            appearance: none;
-            border: none;
-            display: block;
-            width: 100%;
-            padding-top: 15px;
-            padding-left: 15px;
-            padding-right: 15px;
-            padding-bottom: 85px;
-            font-size: 1.2rem;
-            text-align: center;
-            margin-top: 10px;
-            margin-bottom: 35px;
-            border-radius: 6px;
-            resize: none;
-            overflow: hidden;
-        }
+.button {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+    
+.button:hover {
+        background-color: #195c1c ;
+        color: white;
+    }
+.dropdown {
+        display: inline;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+}
+.dropdown-button {
+        background-color: #b062b3;
+        color: whitesmoke;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 8px;
+    }
+.dropdown-button:hover {
+        background-color: rgb(145, 76, 129);
+    }
+
+.button-container {
+        text-align: center;
+    }
+#map {
+     height: 200%;
+     width :70%; 
+     margin-left:auto;
+     margin-right:auto;
+     background-image: url("../images/eat.png");
+     border-radius: 4px;
+    }
+#map:hover {
+    filter: blur(2px);
+}
+    
+html,body {
+    height: 50%;
+    margin: 0;
+    padding: 0;
+}
+  
+#panel {
+    height: 50%;
+    width: null;
+    background-color: white;
+    position: fixed;
+    z-index: 1;
+    overflow-x: hidden;
+    transition: all .2s ease-out;
+}
+  
+.open {
+     width: 250px;
+    }
+  
+      /* Styling for place details
+      .hero {
+        width: 100%;
+        height: auto;
+        max-height: 166px;
+        display: block;
+      }
+  
+      .place,
+      p {
+        font-family: 'open sans', arial, sans-serif;
+        padding-left: 18px;
+        padding-right: 18px;
+      }
+  
+      .details {
+        color: darkslategrey;
+      }
+  
+      a {
+        text-decoration: none;
+        color: cadetblue;
+      } */
+
+    
+    
