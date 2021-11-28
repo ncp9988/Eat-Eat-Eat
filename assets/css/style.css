@@ -1,16 +1,59 @@
 * {
-margin: 0;
-padding: 0;
-}
-
+    margin: 0;
+    padding: 0;
+    }
+    
 #map {
-    height: 100%;
-    background-color: grey;
-  }
-header {
-  background-color: rgb(175, 204, 223);
-  margin: 30px;
-  text-align: center;
-  border-bottom: rgb(13, 26, 54) ;
+        height: 100%;
+        background-color: grey;
+    }
+
+h1, h2, h3 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
+header {
+        background-color: rgb(145, 170, 216);
+        margin: 30px;
+        text-align: center;
+    }
+    .card-body {
+        min-height: 100px;
+    }
+    .answer-box {
+        border-radius: 5px;
+        border-width: 1px;
+        box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+        color: hsl(210, 10%, 12%);
+        font-size: 18px;
+        margin: 0 auto;
+        max-width: 900px;
+        padding: 30px 40px;
+        
+    }
+    .wrapper {
+            margin: auto;
+            padding-top: px;
+            padding-left: 20px;
+            padding-right: 20px;
+            justify-content: center;
+        }
+        #answer {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            display: block;
+            width: 100%;
+            padding-top: 15px;
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-bottom: 85px;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 35px;
+            border-radius: 6px;
+            resize: none;
+            overflow: hidden;
+        }
