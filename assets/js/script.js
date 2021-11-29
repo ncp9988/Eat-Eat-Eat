@@ -9,8 +9,9 @@ let currentInfoWindow;
 let service;
 let infoPane;
 var searchBtn = document.getElementById("search");
-var foodType = document.getElementById("food-type").value
-console.log(foodType)
+var foodType = document.getElementById("food-type")
+var foodSelect = ""
+
 
 function initMap() {
   // Initialize variables
@@ -22,6 +23,7 @@ function initMap() {
 
   
 }
+
 
 
 
@@ -57,6 +59,22 @@ function getLocation() {
     }
 }
 
+var foodtypeInput = function (event) {
+  event.preventDefault();
+ foodSelect = foodType.value;
+
+  if (foodSelect) {
+      getNearbyPlaces(foodtype);
+
+      // foodType = "";
+  } else {
+      alert("Please enter a type of Food");
+  }
+}
+searchBtn.addEventListener("click", foodtypeInput);
+
+
+
 
 
 
@@ -87,7 +105,7 @@ function getNearbyPlaces(position) {
   let request = {
     location: position,
     rankBy: google.maps.places.RankBy.DISTANCE,
-    keyword: foodType
+    keyword: foodSelect
 
   };
 
@@ -209,4 +227,4 @@ function showPanel(placeResult) {
 
 
 // add event listener
-searchBtn.addEventListener("click", getLocation);
+searchBtn.addEventListener("click", getLocation, foodtypeInput);
