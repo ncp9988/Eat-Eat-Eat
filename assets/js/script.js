@@ -9,6 +9,8 @@ let currentInfoWindow;
 let service;
 let infoPane;
 var searchBtn = document.getElementById("search");
+var foodType = document.getElementById("food-type").value
+console.log(foodType)
 
 function initMap() {
   // Initialize variables
@@ -85,7 +87,8 @@ function getNearbyPlaces(position) {
   let request = {
     location: position,
     rankBy: google.maps.places.RankBy.DISTANCE,
-    keyword: 'restaurant'
+    keyword: foodType
+
   };
 
   service = new google.maps.places.PlacesService(map);
@@ -203,6 +206,7 @@ function showPanel(placeResult) {
   // Open the infoPane
   infoPane.classList.add("open");
 }
+
 
 // add event listener
 searchBtn.addEventListener("click", getLocation);

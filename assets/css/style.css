@@ -104,13 +104,13 @@ html,body {
      width: 250px;
     }
   
-      /* Styling for place details
+      Styling for place details
       .hero {
-        width: 100%;
+        width: 20%;
         height: auto;
         max-height: 166px;
         display: block;
-      }
+      } 
   
       .place,
       p {
@@ -126,7 +126,7 @@ html,body {
       a {
         text-decoration: none;
         color: cadetblue;
-      } */
+      } 
 
     
     
