@@ -11,7 +11,7 @@ let infoPane;
 var searchBtn = document.getElementById("search");
 var foodType = document.getElementById("food-type")
 var foodSelect = ""
-var 
+var  radius = 8046.72
 
 
 function initMap() {
@@ -24,6 +24,7 @@ function initMap() {
 
   
 }
+
 
 
 
@@ -63,9 +64,10 @@ function getLocation() {
 var foodtypeInput = function (event) {
   event.preventDefault();
  foodSelect = foodType.value;
-
+  radius = document.getElementById("distance").value
+  console.log(radius)
   if (foodSelect) {
-      getNearbyPlaces(foodtype);
+      getNearbyPlaces();
 
       // foodType = "";
   } else {
@@ -105,9 +107,9 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
 function getNearbyPlaces(position) {
   let request = {
     location: position,
-    rankBy: google.maps.places.RankBy.DISTANCE,
-    keyword: foodSelect
-
+    // rankBy: google.maps.places.RankBy.DISTANCE,
+    keyword: foodSelect,
+    radius:radius
   };
 
   service = new google.maps.places.PlacesService(map);
