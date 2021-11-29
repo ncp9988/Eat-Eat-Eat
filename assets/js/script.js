@@ -11,6 +11,7 @@ let infoPane;
 var searchBtn = document.getElementById("search");
 var foodType = document.getElementById("food-type")
 var foodSelect = ""
+var 
 
 
 function initMap() {
