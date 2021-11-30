@@ -30,14 +30,14 @@
             <select id="distance" name="distance" class="dropdown-button">
                 <!-- <option value="" disabled selected>Distance</option> -->
                 <option value="8046.72">Within 5 miles</option>
-                <option value="16093.4" default>Within 10 miles</option>
+                <option value="16093.4" default >Within 10 miles</option>
                 <option value="24140.2">Within 15 miles</option>
             </select>
         </div>
     </div>
     <!-- TODO: Step 4A2: Add a generic sidebar -->
     <!-- The slide-out panel for showing place details -->
-    <div id="panel"></div>
+    
 
     <!-- Map appears here -->
     
@@ -46,6 +46,8 @@
     <div class="button-container">
         <button id="search" class="button"> search</button>
     </div>
+
+    <div id="panel"></div>
 
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0qy3yXYUKNlb_Bj7RH_RSVwdxdBUVH4A&libraries=places&callback=initMap"></script>

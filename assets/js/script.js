@@ -14,6 +14,10 @@ var foodSelect = ""
 var  radius = 8046.72
 
 
+// var loadStorage = function() {
+//   previous = JSON.parse(localStorage.getItem("eateateat"));
+
+// }
 function initMap() {
   // Initialize variables
   bounds = new google.maps.LatLngBounds();
@@ -21,11 +25,9 @@ function initMap() {
   currentInfoWindow = infoWindow;
   /*  Step 4A3: Add a generic sidebar */
   infoPane = document.getElementById('panel');
-
+  //  getLocation()
   
 }
-
-
 
 
 
@@ -40,7 +42,8 @@ function getLocation() {
         map = new google.maps.Map(document.getElementById('map'), {
           center: pos,
           zoom: 15
-        });
+        }
+        );
         bounds.extend(pos);
   
         infoWindow.setPosition(pos);
@@ -49,6 +52,7 @@ function getLocation() {
         map.setCenter(pos);
   
         // Call Places Nearby Search on user's location
+        
         getNearbyPlaces(pos);
       }, 
       () => {
@@ -75,8 +79,6 @@ var foodtypeInput = function (event) {
   }
 }
 searchBtn.addEventListener("click", foodtypeInput);
-
-
 
 
 
@@ -118,6 +120,8 @@ function getNearbyPlaces(position) {
 
 // Handle the results (up to 20) of the Nearby Search
 function nearbyCallback(results, status) {
+  console.log(results)
+  localStorage.setItem("eateateat",JSON.stringify(results))
   if (status == google.maps.places.PlacesServiceStatus.OK) {
     createMarkers(results);
   }

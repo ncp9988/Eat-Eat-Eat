@@ -96,7 +96,7 @@ html,body {
     background-color: white;
     position: fixed;
     z-index: 1;
-    overflow-x: hidden;
+    /* overflow-x: hidden; */
     transition: all .2s ease-out;
 }
   
