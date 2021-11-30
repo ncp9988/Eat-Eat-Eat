@@ -15,8 +15,13 @@ var  radius = 8046.72
 var previous;
 
 
-// var loadStorage = function() {
-//   previous = JSON.parse(localStorage.getItem("eateateat"));
+var loadStorage = function() {
+  if (!foodSelect && !radius) {
+  foodSelect =JSON.parse(localStorage.getItem("pre-foodtype"));
+  radius=JSON.parse(localStorage.getItem("pre-radius"))
+
+  }
+}
 // var loadStorage = function() {
 //   var foodType = localStorage.getItem("eateateat");
 
@@ -31,10 +36,15 @@ function initMap() {
   infoPane = document.getElementById('panel');
   //  getLocation()
   previous = JSON.parse(localStorage.getItem("eateateat"));
+  foodSelect =JSON.parse(localStorage.getItem("pre-foodtype"));
+  radius=JSON.parse(localStorage.getItem("pre-radius"))
   console.log(previous)
-  createMarkers(previous);
+  // createMarkers(previous);
+  getNearbyPlaces();
+
   
 }
+
 
 
 
@@ -77,6 +87,10 @@ var foodtypeInput = function (event) {
  foodSelect = foodType.value;
   radius = document.getElementById("distance").value
   console.log(radius)
+  localStorage.setItem("pre-foodtype",JSON.stringify(foodSelect))
+  localStorage.setItem("pre-radius",JSON.stringify(radius))
+  console.log(foodSelect,radius)
+
   if (foodSelect) {
       getNearbyPlaces();
 
@@ -118,8 +132,10 @@ function getNearbyPlaces(position) {
     location: position,
     // rankBy: google.maps.places.RankBy.DISTANCE,
     keyword: foodSelect,
-    radius:radius
+    radius:radius,
+    
   };
+  console.log(request)
 
   service = new google.maps.places.PlacesService(map);
   service.nearbySearch(request, nearbyCallback);
@@ -242,3 +258,5 @@ function showPanel(placeResult) {
 
 // add event listener
 searchBtn.addEventListener("click", getLocation, foodtypeInput);
+// initMap();
+getLocation();
