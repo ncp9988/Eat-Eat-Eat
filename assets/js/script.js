@@ -12,11 +12,15 @@ var searchBtn = document.getElementById("search");
 var foodType = document.getElementById("food-type")
 var foodSelect = ""
 var  radius = 8046.72
+var previous;
 
 
 // var loadStorage = function() {
 //   previous = JSON.parse(localStorage.getItem("eateateat"));
+// var loadStorage = function() {
+//   var foodType = localStorage.getItem("eateateat");
 
+// }
 // }
 function initMap() {
   // Initialize variables
@@ -26,6 +30,9 @@ function initMap() {
   /*  Step 4A3: Add a generic sidebar */
   infoPane = document.getElementById('panel');
   //  getLocation()
+  previous = JSON.parse(localStorage.getItem("eateateat"));
+  console.log(previous)
+  createMarkers(previous);
   
 }
 
