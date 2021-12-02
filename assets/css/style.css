@@ -64,7 +64,11 @@ header {
         margin: 4px 2px;
         cursor: pointer;
         border-radius: 8px;
+        border: #b062b3;
     }
+::placeholder{
+    color: rgb(212, 220, 228);
+}
 .dropdown-button:hover {
         background-color: rgb(145, 76, 129);
     }

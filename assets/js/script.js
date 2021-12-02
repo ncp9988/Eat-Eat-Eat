@@ -16,17 +16,14 @@ var previous;
 
 
 var loadStorage = function() {
+  
   if (!foodSelect && !radius) {
   foodSelect =JSON.parse(localStorage.getItem("pre-foodtype"));
   radius=JSON.parse(localStorage.getItem("pre-radius"))
 
   }
 }
-// var loadStorage = function() {
-//   var foodType = localStorage.getItem("eateateat");
 
-// }
-// }
 function initMap() {
   // Initialize variables
   bounds = new google.maps.LatLngBounds();
@@ -123,7 +120,7 @@ function handleLocationError(browserHasGeolocation, infoWindow) {
   currentInfoWindow = infoWindow;
 
   // Call Places Nearby Search on the default location
-  getNearbyPlaces(pos);
+  // getNearbyPlaces(pos);
 }
 
 // Perform a Places Nearby Search Request
@@ -257,6 +254,7 @@ function showPanel(placeResult) {
 
 
 // add event listener
-searchBtn.addEventListener("click", getLocation, foodtypeInput);
+searchBtn.addEventListener("click", getLocation);
 // initMap();
 getLocation();
+// foodtypeInput();
