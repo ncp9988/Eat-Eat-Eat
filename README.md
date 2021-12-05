@@ -11,4 +11,5 @@ https://ncp9988.github.io/Eat-Eat-Eat/
 ### GitHub
 https://github.com/ncp9988/Eat-Eat-Eat.git
 
-![Screenshot](https://github.com/ncp9988/Eat-Eat-Eat/blob/main/assets/images/Screen%20Shot%202021-12-01%20at%205.53.29%20PM.png)
+### Screenshot
+![Screenshot](https://github.com/ncp9988/Eat-Eat-Eat/blob/main/assets/images/Screen%20Shot%202021-12-05%20at%209.31.25%20AM.png)
